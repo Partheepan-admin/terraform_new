@@ -9,7 +9,7 @@ resource "aws_vpc" "demo-vpc" {
 }
 
 resource "aws_internet_gateway" "demo-internet-gateway" {
-vpc_id    =  aws_vpc.vpc.id
+vpc_id    =  aws_vpc.demo-vpc.id
 tags = {
     Name = "test-ig"
   } 
