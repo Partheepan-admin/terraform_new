@@ -4,6 +4,6 @@ resource "aws_instance" "terraform-demo" {
    instance_type = "t2.micro"
    key_name = "testkey"
    tags = {
-      Name = "terra-test_${count.index}" 
+      Name = "terra-test_${count.index}"
       }
 }  
