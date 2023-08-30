@@ -3,7 +3,13 @@ pipeline {
         environment {
             TF_LOG = "TRACE"
         }
-     stages {
+        stages {
+           stage('Checkout') {
+              steps {
+                checkout scm
+              }
+           }
+           
            stage ('terraform init') {
               steps {
                  script {
