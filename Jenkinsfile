@@ -1,8 +1,5 @@
 pipeline {
     agent any
-       ## environment {
-         ##   TF_LOG = "TRACE"
-      ##  }
         tools {
 
         }
