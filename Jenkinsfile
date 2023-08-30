@@ -1,32 +1,32 @@
 pipeline {
     agent any
-        environment {
-            TF_LOG = "TRACE"
+       ## environment {
+         ##   TF_LOG = "TRACE"
+      ##  }
+        tools {
+
         }
         stages {
-           stage('Checkout') {
+           stage('Git Checkout') {
               steps {
-                checkout scm
+                
               }
            }
-           
-           stage ('terraform init') {
+           stage('Terraform init') {
               steps {
                  script {
                       sh 'terraform init'
                  }
               }
            }
-
-           stage ('terraform plan') {
+           stage('Terraform plan') {
               steps {
                  script {
                      sh 'terraform plan'
                  }
               }
            }
-           
-           stage ('terraform apply') {
+           stage('Terraform apply') {
               steps {
                  script {
                     sh 'terraform apply'
