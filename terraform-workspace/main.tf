@@ -4,6 +4,6 @@ resource "aws_instance" "demo-workspace" {
    count = 3  ### 3 instance need to create
    key_name = "testkey"
    tags = {
-      Name = "var.instance_name-$(count.index)"  
+      Name = "var.instance_name-${count.index}"  
       }
 } 

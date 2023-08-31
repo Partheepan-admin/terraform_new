@@ -1,6 +1,6 @@
 variable "instance_name" {
     type = string
-    default = "workspace-dev"
+    default = "workspace"
 }
 
 variable "instance_type" {
