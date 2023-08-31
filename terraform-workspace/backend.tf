@@ -4,8 +4,8 @@ terraform {
     key            = "terraform.tfstate"
     region         = "ap-south-1"
     encrypt        = true
-    versioning {
-      enabled = true
-    }
+   ### versioning {
+    ####  enabled = true
+  ####  }
   }
 }
