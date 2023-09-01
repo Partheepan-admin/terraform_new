@@ -5,9 +5,5 @@ resource "aws_instance" "demo-workspace" {
    tags = {
       Name = var.instance_name  
       }
-      
-   lifecycle {
-     prevent_destroy = "false"
-   }
 }
 
