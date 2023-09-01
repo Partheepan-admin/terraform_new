@@ -1,7 +1,7 @@
 resource "aws_instance" "demo-lifecycle" {
   ami =  var.instance_ami
   instance_type = var.instance_type
-  key_name = "testkey"
+  key_name = "demo-terraform"
   tags = {
     Name = var.instance_name
   }
