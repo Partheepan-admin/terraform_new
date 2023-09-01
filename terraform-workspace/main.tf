@@ -7,7 +7,7 @@ resource "aws_instance" "demo-workspace" {
       }
       
    lifecycle {
-     prevent_destroy = "true"
+     prevent_destroy = "false"
    }
 }
 
