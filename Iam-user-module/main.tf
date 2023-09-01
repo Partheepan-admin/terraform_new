@@ -1,3 +1,3 @@
 module "Iam-user" {
-  source = "./user.tf"
+  source = "Iam-user-module/user.tf"
 }
