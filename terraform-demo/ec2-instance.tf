@@ -6,7 +6,19 @@ resource "aws_instance" "demo-lifecycle" {
     Name = var.instance_name
   }
   
-  provisioner "local-exec" {
-    command = "echo ${var.instance_name} is created succesfully"
-  }
+   connection {
+     type = "ssh"
+     user = "ec2-user"
+     host = self.public_ip
+     private_key = file("demo-terraform.pem")
+   }
+   provisioner "remote-exec" {
+    inline = [
+      "sudo yum install git -y"
+    ]
+   }
 }
+
+
+
+
