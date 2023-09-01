@@ -4,10 +4,10 @@ data "aws_vpc" "demo-vpc" {
   }
 }
 
-resource "aws_subnet "demo-subnet" {
+resource "aws_subnet" "demo-subnet" {
   vpc_id = data.aws_vpc.demo-vpc.id
   cidr_block = "10.0.2.0/24"
-    tags = {
-        Name = "my-subnet"
-    }
+  tags = {
+    Name = "my-subnet"
   }
+}
