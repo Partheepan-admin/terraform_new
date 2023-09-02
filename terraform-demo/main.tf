@@ -1,8 +1,9 @@
-resource "aws_instance" "demo-lifecycle" {
+resource "aws_instance" "demo-foreach" {
   ami =  var.instance_ami
-  instance_type = var.instance_type
+  for_each = var.instance_type
+  instance_type = each.value
   key_name = "demo-terraform"
-  tags = {
-    Name = var.instance_name
+   tags = {
+    Name = each.key
   }
 }
