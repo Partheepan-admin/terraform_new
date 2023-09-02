@@ -3,13 +3,12 @@ output "user_arn" {
     value = aws_iam_user.demo-user.arn
 }
 
-output "instance_id" {
-  description = "Id of the ec2 instance"
-  value = aws_instance.module-insta.id
+output "ec2_instance_public_ip" {
+  description = "Public IP address of the EC2 instance"
+  value       = aws_instance.example_instance.public_ip
 }
 
-output "instacne_puplic_ip" {
-  description = "Public ip of the created Instance"
-  value = aws_instance.module-insta.public_ip
+output "ec2_instance_id" {
+  description = "Instance ID of the EC2 instance"
+  value       = aws_instance.example_instance.id
 }
-
