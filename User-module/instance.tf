@@ -8,5 +8,5 @@ resource "aws_instance" "demo-instance" {
 
 resource "aws_iam_instance_profile" "demo-profile" {
   name = "Module-instance-profile"
-  roles = aws_iam_role.demo-iam-role.name
+  role = aws_iam_role.demo-iam-role.name
 }
