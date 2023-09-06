@@ -34,7 +34,7 @@ resource "aws_subnet" "demo-subnet" {
 
 resource "aws_security_group" "demo-SG" {
   vpc_id = aws_vpc.demo-vpc.id
-  ingress = {
+   ingress = {
     description = "SSH"
     from_port = 22
     to_port = 22
