@@ -4,7 +4,7 @@ resource "aws_iam_user" "demo-iam-user" {
 
 resource "aws_iam_policy_attachment" "demo-attachment" {
   name = "AWS-policy-attachment"
-  policy_arn = aws_iam_policy.demo.policy.arn
+  policy_arn = aws_iam_policy.demo-policy.arn
   users = [aws_iam_user.demo-iam-user.name]
 }
 
