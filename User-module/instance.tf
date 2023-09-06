@@ -4,11 +4,8 @@ resource "aws_instance" "demo-instance" {
   subnet_id = aws_subnet.demo-subnet.id
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   iam_instance_profile = aws_iam_instance_profile.demo-profile.name
-
-  tags = {
-    Name = Module-insta
-  }
 }
+
 
 resource "aws_iam_instance_profile" "demo-profile" {
   name = "Module-instance-profile"
