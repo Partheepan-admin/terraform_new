@@ -4,7 +4,7 @@ resource "aws_instance" "demo-instance" {
   subnet_id = aws_subnet.demo-subnet.id
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   iam_instance_profile = {
-    name = aws_iam_user.demo-iam-user.name
+    name = aws_iam_role.demo-iam-role.name
   }
 
 }
