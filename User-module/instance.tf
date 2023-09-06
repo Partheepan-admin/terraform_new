@@ -3,7 +3,7 @@ resource "aws_instance" "demo-instance" {
   instance_type = var.instance_type
   subnet_id = aws_subnet.demo-subnet.id
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
-  iam_instance_profile {
+  iam_instance_profile = {
     name = aws_iam_user.demo-iam-user.name
   }
 
