@@ -32,19 +32,23 @@ resource "aws_subnet" "demo-subnet" {
   }
 }
 
-resource "aws_security_group" "demo-SG" {
+resource "aws_security_group" "demo-sg" {
+  name        = "Module-SG"
   vpc_id = aws_vpc.demo-vpc.id
-   ingress = {
-    description = "SSH"
-    from_port = 22
-    to_port = 22
-    protocol = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+  description = "security group creation"
+
+  # Inbound rules
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] 
   }
-   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1" # All traffic
+    cidr_blocks = ["0.0.0.0/0"] 
   }
 }
