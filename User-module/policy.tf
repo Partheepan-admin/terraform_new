@@ -1,4 +1,4 @@
-resource "aws_iam_policy" "demo.policy" {
+resource "aws_iam_policy" "demo-policy" {
   name = "AWS-Iam-Policy"
   description = "Create a Iam policy for EC2 instance with read only access"
   policy = jsonencode({
