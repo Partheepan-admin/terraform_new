@@ -4,6 +4,6 @@ output "instance_public_ip" {
 }
 
 output "instance_id" {
-  default = "instance ID"
+  description = "instance id details"
   value = aws_instance.demo-instance.id
 }
