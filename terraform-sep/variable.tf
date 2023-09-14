@@ -1,6 +1,6 @@
 variable "instance_ami" {
   type = string
-  default = "ami-06f621d90fa29f6d0"
+  default = "ami-05552d2dcf89c9b24"
 }
 
 variable "instance_type" {
@@ -10,5 +10,5 @@ variable "instance_type" {
 
 variable "instance_name" {
   type = string
-  default = "terraform-demo"
+  default = "Trial-instance"
 }
